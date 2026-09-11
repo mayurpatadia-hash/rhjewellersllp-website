@@ -1,276 +1,2828 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* =========================================================
+   R.H. JEWELLERS LLP
+   FRESH GLOBAL CSS
+========================================================= */
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  font-family:'Inter',sans-serif;
-  background:#FFFBF5;
-  color:#2d1f13;
-  overflow-x:hidden;
+body {
+  background: #fbf8f1;
+  color: #29231b;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
-h1,h2,h3,h4,h5{
-  font-family:'Cormorant Garamond',serif;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
+a {
+  color: inherit;
 }
 
-img{
-  width:100%;
-  display:block;
+button,
+input {
+  font: inherit;
 }
 
-.container{
-  max-width:1300px;
-  margin:auto;
-  padding:0 20px;
+::selection {
+  background: #c9a227;
+  color: #ffffff;
 }
 
-section{
-  padding:90px 0;
+/* =========================
+   COMMON
+========================= */
+
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
 }
 
-/* ---------- HERO ---------- */
-
-.hero{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
+section {
+  scroll-margin-top: 80px;
 }
 
-.hero-tag{
-  color:#C9A227;
-  font-weight:600;
-  margin-bottom:15px;
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
 }
 
-.hero h1{
-  font-size:64px;
-  line-height:1.1;
-  margin-bottom:25px;
+p {
+  line-height: 1.7;
 }
 
-.hero-text{
-  font-size:20px;
-  color:#555;
-  line-height:1.8;
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  width: 100%;
+
+  background: rgba(255, 252, 246, 0.97);
+
+  border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
-.hero-buttons{
-  margin-top:35px;
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
+.nav-container {
+  width: min(1200px, 92%);
+  height: 76px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.hero-image img{
-  border-radius:25px;
-  box-shadow:0 25px 60px rgba(0,0,0,.15);
+/* LOGO */
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  color: #201a12;
 }
 
-/* ---------- BUTTON ---------- */
-
-.gold-btn{
-  display:inline-block;
-  background:linear-gradient(135deg,#d4af37,#b8860b);
-  color:white;
-  padding:16px 36px;
-  border-radius:40px;
-  font-weight:600;
-  transition:.35s;
+.nav-logo img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
 }
 
-.gold-btn:hover{
-  transform:translateY(-5px);
-  box-shadow:0 20px 40px rgba(212,175,55,.35);
+.nav-brand h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1;
 }
 
-/* ---------- SECTION ---------- */
+.nav-brand p {
+  margin-top: 5px;
 
-.section-title{
-  text-align:center;
-  font-size:52px;
-  margin-bottom:10px;
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+
+  color: #96791f;
 }
 
-.section-subtitle{
-  text-align:center;
-  color:#777;
-  margin-bottom:60px;
+/* DESKTOP MENU */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
-/* ---------- COLLECTIONS ---------- */
+.desktop-nav a {
+  position: relative;
 
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:35px;
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+
+  color: #30291e;
+
+  transition: color 0.25s ease;
 }
 
-.card{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  transition:.35s;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
+.desktop-nav a:hover {
+  color: #a27d0c;
 }
 
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 25px 55px rgba(0,0,0,.15);
+.desktop-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 1px;
+
+  background: #c9a227;
+
+  transition: width 0.25s ease;
 }
 
-.card img{
-  height:340px;
-  object-fit:cover;
+.desktop-nav a:hover::after {
+  width: 100%;
 }
 
-.card-content{
-  padding:22px;
+
+/* =========================================================
+   HERO
+========================================================= */
+
+#home {
+  min-height: calc(100vh - 76px);
+
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(214, 177, 66, 0.08),
+      transparent 35%
+    ),
+    #fbf8f1;
 }
 
-.card h3{
-  font-size:34px;
-  margin-bottom:10px;
+.hero {
+  min-height: calc(100vh - 76px);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding-top: 55px;
+  padding-bottom: 55px;
 }
 
-.card p{
-  color:#666;
-  margin-bottom:20px;
+.hero-content {
+  max-width: 600px;
 }
 
-/* ---------- ABOUT ---------- */
+.hero-tag {
+  margin-bottom: 18px;
 
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
+  font-size: 12px;
+  font-weight: 500;
+
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+
+  color: #a27d0c;
 }
 
-.about img{
-  border-radius:25px;
-  box-shadow:0 20px 45px rgba(0,0,0,.15);
+.hero h1 {
+  margin-bottom: 22px;
+
+  font-size: clamp(52px, 5.4vw, 78px);
+  font-weight: 500;
+
+  line-height: 0.95;
+  letter-spacing: -1px;
+
+  color: #29231b;
 }
 
-/* ---------- WHY ---------- */
+.hero-text {
+  max-width: 560px;
 
-.features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-  text-align:center;
+  margin-bottom: 32px;
+
+  font-size: 16px;
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: #6e665b;
 }
 
-.feature{
-  background:white;
-  padding:40px;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.feature h3{
-  margin:20px 0;
+.hero-image {
+  position: relative;
+
+  width: 100%;
 }
 
-/* ---------- CONTACT ---------- */
+.hero-image::before {
+  content: "";
 
-.contact-card{
-  max-width:750px;
-  margin:auto;
-  background:white;
-  padding:50px;
-  border-radius:25px;
-  text-align:center;
-  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  position: absolute;
+  inset: -12px;
+
+  border: 1px solid rgba(201, 162, 39, 0.25);
+
+  border-radius: 28px;
+
+  pointer-events: none;
 }
 
-.contact-card p{
-  margin:18px 0;
+.hero-image img {
+  width: 100%;
+  height: 570px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px rgba(65, 48, 20, 0.14);
 }
 
-/* ---------- FOOTER ---------- */
+/* =========================================================
+   BUTTONS
+========================================================= */
 
-footer{
-  background:#1b1208;
-  color:white;
-  text-align:center;
-  padding:60px 20px;
+.gold-btn,
+.outline-btn {
+  display: inline-flex;
+
+  min-height: 52px;
+
+  padding: 0 30px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
-footer p{
-  margin-top:15px;
-  color:#bbb;
+.gold-btn {
+  background: linear-gradient(
+    135deg,
+    #d7af28,
+    #bd9419
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 22px rgba(174, 131, 20, 0.22);
 }
 
-/* ---------- MOBILE ---------- */
+.gold-btn:hover {
+  transform: translateY(-2px);
 
-@media(max-width:992px){
-
-.hero{
-grid-template-columns:1fr;
-text-align:center;
+  box-shadow:
+    0 12px 28px rgba(174, 131, 20, 0.3);
 }
 
-.about{
-grid-template-columns:1fr;
+.outline-btn {
+  border: 1px solid #c9a227;
+
+  background: transparent;
+
+  color: #8a6b16;
 }
 
-.hero h1{
-font-size:48px;
+.outline-btn:hover {
+  background: #c9a227;
+  color: #ffffff;
+
+  transform: translateY(-2px);
 }
 
-.hero-buttons{
-justify-content:center;
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+  padding: 110px 0;
+
+  background: #ffffff;
 }
 
-.hero-image{
-order:-1;
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 80px;
 }
 
+.about-content {
+  max-width: 570px;
 }
 
-@media(max-width:768px){
+.about-content h2 {
+  margin-bottom: 22px;
 
-section{
-padding:70px 0;
+  font-size: clamp(42px, 5vw, 62px);
+  font-weight: 500;
+
+  line-height: 1;
 }
 
-.section-title{
-font-size:38px;
+.about-content p {
+  margin-bottom: 18px;
+
+  color: #70685d;
+  font-size: 15px;
 }
 
-.hero h1{
-font-size:40px;
+.about-image {
+  position: relative;
 }
 
-.hero-text{
-font-size:18px;
+.about-image img {
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 20px 50px rgba(45, 34, 15, 0.12);
 }
 
-.card img{
-height:280px;
+/* =========================================================
+   COLLECTIONS
+========================================================= */
+
+.collections-section {
+  padding: 110px 0;
+
+  background: #fbf8f1;
 }
 
-.contact-card{
-padding:30px;
+.collections-heading {
+  text-align: center;
+
+  margin-bottom: 55px;
 }
 
-.gold-btn{
-width:100%;
-text-align:center;
+.collections-label,
+.why-label,
+.section-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  color: #a27d0c;
 }
 
+.collections-heading h2,
+.why-heading h2,
+.contact-heading h2 {
+  font-size: clamp(42px, 5vw, 58px);
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+.heading-line,
+.why-line {
+  width: 55px;
+  height: 1px;
+
+  margin: 18px auto;
+
+  background: #c9a227;
+}
+
+.collections-heading p,
+.why-heading p {
+  color: #80776a;
+
+  font-size: 14px;
+}
+
+.collections-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.collection-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(201, 162, 39, 0.18);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 25px rgba(60, 45, 15, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 38px rgba(60, 45, 15, 0.12);
+}
+
+.collection-image {
+  overflow: hidden;
+
+  background: #f4eee2;
+}
+
+.collection-image img {
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.collection-card:hover .collection-image img {
+  transform: scale(1.05);
+}
+
+.collection-content {
+  padding: 22px 20px 24px;
+}
+
+.collection-content h3 {
+  margin-bottom: 8px;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.collection-content p {
+  margin-bottom: 17px;
+
+  font-size: 12px;
+  line-height: 1.6;
+
+  color: #81786c;
+}
+
+.collection-btn {
+  display: inline-block;
+
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid #c9a227;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #9a7718;
+}
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.why-section {
+  padding: 110px 0;
+
+  background: #ffffff;
+}
+
+.why-heading {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.why-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.why-card {
+  position: relative;
+
+  min-height: 270px;
+
+  padding: 30px 25px;
+
+  background: #fbf8f1;
+
+  border: 1px solid rgba(201, 162, 39, 0.18);
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(60, 45, 15, 0.08);
+}
+
+.why-icon {
+  margin-bottom: 20px;
+
+  font-size: 27px;
+
+  color: #c9a227;
+}
+
+.why-number {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 20px;
+
+  color: rgba(140, 110, 20, 0.3);
+}
+
+.why-card h3 {
+  margin-bottom: 10px;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.why-card p {
+  font-size: 13px;
+
+  color: #756d62;
+}
+
+.why-card-line {
+  width: 35px;
+  height: 1px;
+
+  margin-top: 22px;
+
+  background: #c9a227;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+  padding: 110px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fbf8f1,
+      #f7f0df
+    );
+}
+
+.contact-heading {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.contact-heading h2 {
+  margin-bottom: 20px;
+}
+
+.contact-heading p {
+  font-size: 15px;
+
+  color: #746b5e;
+}
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 28px;
+
+  max-width: 950px;
+
+  margin: 0 auto;
+}
+
+.contact-card {
+  padding: 42px 35px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(201, 162, 39, 0.2);
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow:
+    0 12px 35px rgba(70, 50, 15, 0.06);
+}
+
+.contact-icon {
+  margin-bottom: 12px;
+
+  font-size: 28px;
+
+  color: #c9a227;
+}
+
+.contact-card h3 {
+  margin-bottom: 25px;
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.contact-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.contact-details a {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  text-decoration: none;
+}
+
+.contact-details span {
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #9a7718;
+}
+
+.contact-details strong {
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #40382d;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+
+  min-height: 48px;
+
+  padding: 0 28px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 26px;
+
+  background: #1faa59;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(31, 170, 89, 0.2);
+}
+
+.showroom-name {
+  margin-bottom: 10px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.address {
+  margin-bottom: 25px;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #756d62;
+}
+
+.showroom-card {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.showroom-card .gold-btn,
+.showroom-card .outline-btn {
+  width: min(100%, 280px);
+
+  margin-top: 8px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.luxury-footer {
+  padding: 70px 0 25px;
+
+  background: #211c15;
+
+  color: #ffffff;
+}
+
+.footer-container {
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1.3fr 0.7fr;
+
+  gap: 40px;
+}
+
+.footer-brand h3 {
+  font-size: 31px;
+
+  font-weight: 500;
+}
+
+.footer-line {
+  width: 45px;
+  height: 1px;
+
+  margin: 15px 0;
+
+  background: #c9a227;
+}
+
+.footer-brand p {
+  margin-bottom: 7px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+
+  color: #e3d4a4;
+}
+
+.footer-brand span {
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #aaa095;
+}
+
+.footer-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-links a,
+.footer-social a,
+.footer-contact a {
+  text-decoration: none;
+
+  font-size: 12px;
+
+  color: #d2cbc0;
+
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover,
+.footer-contact a:hover {
+  color: #d5af35;
+}
+
+.footer-contact {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.footer-contact p {
+  font-size: 12px;
+
+  color: #aaa095;
+}
+
+.footer-social {
+  display: flex;
+
+  align-items: flex-start;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+
+  padding-top: 25px;
+
+  margin-top: 15px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 10px;
+
+  color: #8e877d;
+}
+
+/* =========================================================
+   WHATSAPP FLOAT
+========================================================= */
+
+.whatsapp-float {
+  position: fixed;
+
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 9000;
+
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #20c76a;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    gap: 40px;
+  }
+
+  .hero-image img {
+    height: 500px;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+
+  .nav-container {
+    width: 92%;
+    height: 68px;
+  }
+
+  .nav-logo {
+    gap: 9px;
+  }
+
+  .nav-logo img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-brand h2 {
+    font-size: 20px;
+  }
+
+  .nav-brand p {
+    margin-top: 3px;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  /* HAMBURGER */
+
+  .menu-button {
+    display: flex;
+
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    border: 1px solid rgba(201, 162, 39, 0.55);
+    border-radius: 50%;
+
+    background: #fffdf8;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .menu-button span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background: #8d7020;
+
+    transition: 0.25s ease;
+  }
+
+  /* MOBILE NAV */
+
+  .mobile-nav {
+    display: flex;
+
+    position: absolute;
+
+    top: 68px;
+    left: 0;
+
+    width: 100%;
+
+    flex-direction: column;
+
+    background: #fffdf8;
+
+    border-top: 1px solid rgba(201, 162, 39, 0.2);
+
+    box-shadow:
+      0 15px 30px rgba(40, 30, 10, 0.12);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease;
+  }
+
+  .mobile-nav a {
+    display: block;
+
+    padding: 18px 25px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #30291e;
+
+    border-bottom: 1px solid rgba(201, 162, 39, 0.12);
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  /* CHECKBOX OPENS MENU */
+
+  .mobile-menu-toggle:checked ~ .mobile-nav {
+    max-height: 400px;
+
+    opacity: 1;
+  }
+
+  /* HAMBURGER → X */
+
+  .mobile-menu-toggle:checked + .menu-button span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-menu-toggle:checked + .menu-button span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle:checked + .menu-button span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* HERO */
+
+  #home {
+    min-height: auto;
+  }
+
+  .hero {
+    min-height: auto;
+
+    display: flex;
+
+    flex-direction: column-reverse;
+
+    gap: 42px;
+
+    padding-top: 25px;
+    padding-bottom: 65px;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-tag {
+    margin-bottom: 17px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .hero h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(45px, 12vw, 62px);
+
+    line-height: 0.96;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-text {
+    max-width: 620px;
+
+    margin: 0 auto 28px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+  }
+
+  .hero-buttons .gold-btn,
+  .hero-buttons .outline-btn {
+    width: min(100%, 480px);
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image::before {
+    inset: -5px;
+
+    border-radius: 22px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 565px;
+
+    border-radius: 20px;
+
+    object-fit: cover;
+  }
+
+  /* ABOUT */
+
+  .about-section {
+    padding: 80px 0;
+  }
+
+  .about {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+  }
+
+  .about-content {
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+  .about-content h2 {
+    font-size: 46px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-image img {
+    height: 430px;
+
+    border-radius: 18px;
+  }
+
+  /* COLLECTIONS */
+
+  .collections-section {
+    padding: 80px 0;
+  }
+
+  .collections-heading {
+    margin-bottom: 38px;
+  }
+
+  .collections-heading h2,
+  .why-heading h2,
+  .contact-heading h2 {
+    font-size: 45px;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+  }
+
+  .collection-card {
+    border-radius: 13px;
+  }
+
+  .collection-image img {
+    height: 210px;
+  }
+
+  .collection-content {
+    padding: 17px 14px 19px;
+  }
+
+  .collection-content h3 {
+    font-size: 21px;
+  }
+
+  .collection-content p {
+    font-size: 11px;
+  }
+
+  .collection-btn {
+    font-size: 9px;
+  }
+
+  /* WHY */
+
+  .why-section {
+    padding: 80px 0;
+  }
+
+  .why-heading {
+    margin-bottom: 38px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+  }
+
+  .why-card {
+    min-height: 245px;
+
+    padding: 24px 18px;
+  }
+
+  .why-icon {
+    font-size: 23px;
+  }
+
+  .why-card h3 {
+    font-size: 22px;
+  }
+
+  .why-card p {
+    font-size: 11px;
+  }
+
+  /* CONTACT */
+
+  .contact-section {
+    padding: 80px 0;
+  }
+
+  .contact-heading {
+    margin-bottom: 38px;
+  }
+
+  .contact-heading p {
+    font-size: 13px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .contact-card {
+    padding: 35px 22px;
+  }
+
+  /* FOOTER */
+
+  .luxury-footer {
+    padding: 55px 0 25px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    text-align: center;
+  }
+
+  .footer-line {
+    margin: 15px auto;
+  }
+
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    align-items: center;
+  }
+
+  .footer-bottom {
+    grid-column: auto;
+  }
+
+  /* WHATSAPP */
+
+  .whatsapp-float {
+    width: 58px;
+    height: 58px;
+
+    right: 17px;
+    bottom: 17px;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .nav-container {
+    height: 64px;
+  }
+
+  .nav-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-brand h2 {
+    font-size: 18px;
+  }
+
+  .nav-brand p {
+    font-size: 6px;
+    letter-spacing: 0.9px;
+  }
+
+  .menu-button {
+    width: 43px;
+    height: 43px;
+  }
+
+  .mobile-nav {
+    top: 64px;
+  }
+
+  .hero {
+    gap: 35px;
+
+    padding-top: 22px;
+  }
+
+  .hero-image img {
+    height: 565px;
+
+    border-radius: 18px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero-text {
+    padding: 0 8px;
+
+    font-size: 13px;
+  }
+
+  .gold-btn,
+  .outline-btn {
+    min-height: 50px;
+
+    padding: 0 22px;
+  }
+
+  .about-section,
+  .collections-section,
+  .why-section,
+  .contact-section {
+    padding: 70px 0;
+  }
+
+  .about-content h2,
+  .collections-heading h2,
+  .why-heading h2,
+  .contact-heading h2 {
+    font-size: 40px;
+  }
+
+  .collection-image img {
+    height: 185px;
+  }
+
+  .collection-content h3 {
+    font-size: 19px;
+  }
+
+  .why-card {
+    min-height: 230px;
+  }
+
+  .why-card h3 {
+    font-size: 20px;
+  }
+
+  .contact-card h3 {
+    font-size: 27px;
+  }
+}
+/* =========================================================
+   R.H. JEWELLERS — MOBILE LUXURY UPGRADE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* GENERAL */
+
+  .container {
+    width: 91%;
+  }
+
+  section {
+    scroll-margin-top: 75px;
+  }
+
+  /* HERO */
+
+  .hero {
+    padding-top: 28px;
+    padding-bottom: 75px;
+    gap: 42px;
+  }
+
+  .hero-image img {
+    height: 520px;
+    border-radius: 22px;
+  }
+
+  .hero-tag {
+    margin-bottom: 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    margin-bottom: 22px;
+    font-size: 48px;
+    line-height: 0.98;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-text {
+    max-width: 540px;
+    margin-bottom: 32px;
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .hero-buttons {
+    gap: 14px;
+  }
+
+  .hero-buttons .gold-btn,
+  .hero-buttons .outline-btn {
+    width: min(100%, 470px);
+    min-height: 54px;
+    font-size: 14px;
+  }
+
+  /* ABOUT */
+
+  .about-section {
+    padding: 90px 0;
+  }
+
+  .about {
+    gap: 45px;
+  }
+
+  .about-content h2 {
+    margin-bottom: 24px;
+    font-size: 47px;
+    line-height: 1;
+  }
+
+  .about-content p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .about-image img {
+    height: 430px;
+    border-radius: 20px;
+  }
+
+  /* COLLECTIONS */
+
+  .collections-section {
+    padding: 90px 0;
+  }
+
+  .collections-heading {
+    margin-bottom: 42px;
+  }
+
+  .collections-label,
+  .why-label,
+  .section-label {
+    margin-bottom: 13px;
+    font-size: 9px;
+    letter-spacing: 2.2px;
+  }
+
+  .collections-heading h2,
+  .why-heading h2,
+  .contact-heading h2 {
+    font-size: 46px;
+    line-height: 1;
+  }
+
+  .collections-heading p,
+  .why-heading p {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .collection-card {
+    border-radius: 15px;
+  }
+
+  .collection-image img {
+    height: 220px;
+  }
+
+  .collection-content {
+    padding: 19px 16px 21px;
+  }
+
+  .collection-content h3 {
+    margin-bottom: 8px;
+    font-size: 22px;
+    line-height: 1.05;
+  }
+
+  .collection-content p {
+    margin-bottom: 17px;
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .collection-btn {
+    font-size: 9px;
+    letter-spacing: 1.1px;
+  }
+
+  /* WHY CHOOSE US */
+
+  .why-section {
+    padding: 90px 0;
+  }
+
+  .why-heading {
+    margin-bottom: 42px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .why-card {
+    min-height: 265px;
+    padding: 27px 20px;
+    border-radius: 15px;
+  }
+
+  .why-icon {
+    margin-bottom: 19px;
+    font-size: 25px;
+  }
+
+  .why-number {
+    top: 22px;
+    right: 20px;
+    font-size: 18px;
+  }
+
+  .why-card h3 {
+    margin-bottom: 12px;
+    font-size: 23px;
+    line-height: 1.05;
+  }
+
+  .why-card p {
+    font-size: 11.5px;
+    line-height: 1.7;
+  }
+
+  .why-card-line {
+    margin-top: 24px;
+  }
+
+  /* CONTACT */
+
+  .contact-section {
+    padding: 90px 0;
+  }
+
+  .contact-heading {
+    margin-bottom: 42px;
+  }
+
+  .contact-heading p {
+    padding: 0 8px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .contact-grid {
+    gap: 20px;
+  }
+
+  .contact-card {
+    padding: 38px 24px;
+    border-radius: 17px;
+  }
+
+  .contact-icon {
+    margin-bottom: 14px;
+    font-size: 27px;
+  }
+
+  .contact-card h3 {
+    margin-bottom: 27px;
+    font-size: 30px;
+  }
+
+  .contact-details {
+    gap: 17px;
+    margin-bottom: 27px;
+  }
+
+  .contact-details span {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .contact-details strong {
+    font-size: 14px;
+  }
+
+  .whatsapp-btn {
+    min-height: 50px;
+    padding: 0 30px;
+    font-size: 13px;
+  }
+
+  .showroom-name {
+    font-size: 27px;
+  }
+
+  .address {
+    margin-bottom: 27px;
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .showroom-card .gold-btn,
+  .showroom-card .outline-btn {
+    min-height: 50px;
+    font-size: 12px;
+  }
+
+  /* FOOTER */
+
+  .luxury-footer {
+    padding: 60px 0 28px;
+  }
+
+  .footer-container {
+    width: 90%;
+    gap: 32px;
+  }
+
+  .footer-brand h3 {
+    font-size: 30px;
+  }
+
+  .footer-brand p {
+    font-size: 17px;
+  }
+
+  .footer-contact p,
+  .footer-contact a,
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  /* WHATSAPP */
+
+  .whatsapp-float {
+    width: 58px;
+    height: 58px;
+    right: 17px;
+    bottom: 18px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    width: 90%;
+  }
+
+  /* HERO */
+
+  .hero {
+    padding-top: 24px;
+    padding-bottom: 70px;
+    gap: 38px;
+  }
+
+  .hero-image img {
+    height: 475px;
+    border-radius: 20px;
+  }
+
+  .hero-tag {
+    font-size: 9px;
+    letter-spacing: 1.6px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-text {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* COLLECTIONS */
+
+  .collections-section,
+  .why-section,
+  .contact-section {
+    padding: 78px 0;
+  }
+
+  .collections-heading h2,
+  .why-heading h2,
+  .contact-heading h2 {
+    font-size: 41px;
+  }
+
+  .collections-grid {
+    gap: 15px;
+  }
+
+  .collection-image img {
+    height: 190px;
+  }
+
+  .collection-content {
+    padding: 17px 13px 19px;
+  }
+
+  .collection-content h3 {
+    font-size: 20px;
+  }
+
+  .collection-content p {
+    font-size: 10px;
+  }
+
+  /* WHY */
+
+  .why-grid {
+    gap: 15px;
+  }
+
+  .why-card {
+    min-height: 240px;
+    padding: 23px 16px;
+  }
+
+  .why-card h3 {
+    font-size: 20px;
+  }
+
+  .why-card p {
+    font-size: 10.5px;
+  }
+
+  /* CONTACT */
+
+  .contact-card {
+    padding: 34px 20px;
+  }
+
+  .contact-card h3 {
+    font-size: 27px;
+  }
+
+  /* ABOUT */
+
+  .about-section {
+    padding: 78px 0;
+  }
+
+  .about-content h2 {
+    font-size: 42px;
+  }
+
+  .about-image img {
+    height: 390px;
+  }
+}
+/* =========================================================
+   FINAL MOBILE NAVBAR
+   NATIVE iPHONE MENU
+========================================================= */
+
+.mobile-menu {
+  display: none;
+}
+
+/* -------------------------
+   MOBILE
+------------------------- */
+
+@media (max-width: 768px) {
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: relative;
+    z-index: 10000;
+  }
+
+  /* HAMBURGER */
+
+  .mobile-menu summary {
+    list-style: none;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    border: 1px solid rgba(201, 162, 39, 0.6);
+
+    border-radius: 50%;
+
+    background: #fffdf8;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu summary span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background: #8b6e20;
+
+    transition: 0.25s ease;
+  }
+
+  /* HAMBURGER → X */
+
+  .mobile-menu[open] summary span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-menu[open] summary span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu[open] summary span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* -------------------------
+     DROPDOWN
+  ------------------------- */
+
+  .mobile-nav {
+    position: fixed;
+
+    top: 68px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #fffdf8;
+
+    border-top: 1px solid rgba(201, 162, 39, 0.2);
+
+    border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+
+    box-shadow:
+      0 15px 35px rgba(45, 35, 15, 0.15);
+
+    z-index: 9998;
+  }
+
+  .mobile-nav a {
+    display: block;
+
+    width: 100%;
+
+    padding: 18px 26px;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 0.4px;
+
+    color: #30291e;
+
+    background: #fffdf8;
+
+    border-bottom: 1px solid rgba(201, 162, 39, 0.12);
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-nav a:active {
+    background: #f5eedc;
+    color: #a27d0c;
+  }
+}
+
+/* -------------------------
+   SMALL iPHONE
+------------------------- */
+
+@media (max-width: 480px) {
+
+  .nav-container {
+    height: 64px;
+  }
+
+  .mobile-menu summary {
+    width: 43px;
+    height: 43px;
+  }
+
+  .mobile-nav {
+    top: 64px;
+  }
+}
+/* =========================================================
+   FINAL FIX — MOBILE MENU VISIBILITY
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .mobile-menu[open] .mobile-nav {
+    display: flex !important;
+
+    position: fixed !important;
+
+    top: 68px !important;
+    left: 0 !important;
+
+    width: 100% !important;
+
+    z-index: 99999 !important;
+
+    flex-direction: column !important;
+
+    background: #fffdf8 !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    max-height: none !important;
+
+    overflow: visible !important;
+
+    border-top: 1px solid rgba(201, 162, 39, 0.25);
+
+    border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+
+    box-shadow: 0 15px 35px rgba(45, 35, 15, 0.18);
+  }
+
+  .mobile-menu[open] .mobile-nav a {
+    display: block !important;
+
+    width: 100% !important;
+
+    padding: 14px 26px !important;
+
+    background: #fffdf8 !important;
+
+    color: #30291e !important;
+
+    text-decoration: none !important;
+
+    font-family: "Inter", sans-serif !important;
+
+    font-size: 14px !important;
+
+    font-weight: 500 !important;
+
+    border-bottom: 1px solid rgba(201, 162, 39, 0.14);
+
+    text-align: left;
+  }
+
+  .mobile-menu[open] .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-menu[open] .mobile-nav a:active {
+    background: #f5eedc !important;
+    color: #a27d0c !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .mobile-menu[open] .mobile-nav {
+    top: 64px !important;
+  }
+}
+/* =========================================================
+    R.H. JEWELLERS LLP
+    FINAL MOBILE LUXURY POLISH
+ ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =========================
+     PAGE BACKGROUND
+  ========================= */
+
+  body {
+    background: #fbf8f1 !important;
+    color: #29231b !important;
+  }
+
+  /* =========================
+     HERO
+  ========================= */
+
+  #home {
+    background: #fbf8f1 !important;
+    color: #29231b !important;
+  }
+
+  .hero {
+    background: #fbf8f1 !important;
+
+    padding-top: 25px;
+    padding-bottom: 70px;
+
+    gap: 36px;
+  }
+
+  /* HERO IMAGE */
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+
+    height: 455px !important;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow:
+      0 18px 40px rgba(55, 40, 15, 0.14);
+  }
+
+  .hero-image::before {
+    border-radius: 23px;
+  }
+
+  /* HERO TEXT */
+
+  .hero-content {
+    width: 100%;
+
+    background: #fbf8f1 !important;
+
+    color: #29231b !important;
+
+    text-align: center;
+  }
+
+  .hero-tag {
+    color: #a27d0c !important;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .hero h1 {
+    color: #29231b !important;
+
+    margin-bottom: 21px;
+
+    font-size: 46px !important;
+
+    line-height: 1.02;
+
+    font-weight: 500;
+  }
+
+  .hero-text {
+    color: #6f675d !important;
+
+    max-width: 520px;
+
+    margin: 0 auto 29px;
+
+    padding: 0 10px;
+
+    font-size: 13.5px;
+
+    line-height: 1.8;
+  }
+
+  /* HERO BUTTONS */
+
+  .hero-buttons {
+    width: 100%;
+
+    gap: 12px;
+  }
+
+  .hero-buttons .gold-btn,
+  .hero-buttons .outline-btn {
+    width: min(100%, 460px);
+
+    min-height: 52px;
+
+    font-size: 13px;
+  }
+
+  /* =========================
+     COLLECTIONS
+  ========================= */
+
+  .collections-section {
+    background: #ffffff !important;
+
+    padding: 78px 0;
+  }
+
+  .collections-heading {
+    margin-bottom: 38px;
+  }
+
+  .collections-heading h2 {
+    color: #29231b;
+
+    font-size: 43px;
+  }
+
+  .collections-heading p {
+    color: #81786c;
+
+    font-size: 11px;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+  }
+
+  .collection-card {
+    background: #fffdf9;
+
+    border-radius: 14px;
+
+    box-shadow:
+      0 6px 20px rgba(60, 45, 15, 0.07);
+  }
+
+  .collection-image img {
+    height: 195px !important;
+
+    object-fit: cover;
+  }
+
+  .collection-content {
+    padding: 17px 14px 19px;
+  }
+
+  .collection-content h3 {
+    color: #29231b;
+
+    font-size: 20px;
+
+    line-height: 1.1;
+  }
+
+  .collection-content p {
+    color: #756d62;
+
+    font-size: 10.5px;
+
+    line-height: 1.6;
+  }
+
+  /* =========================
+     ABOUT
+  ========================= */
+
+  .about-section {
+    background: #fbf8f1 !important;
+
+    padding: 82px 0;
+  }
+
+  .about {
+    gap: 38px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .about-content h2 {
+    color: #29231b;
+
+    font-size: 43px;
+
+    line-height: 1;
+  }
+
+  .about-content p {
+    color: #70685d;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .about-image img {
+    height: 390px !important;
+
+    border-radius: 19px;
+  }
+
+  /* =========================
+     WHY CHOOSE US
+  ========================= */
+
+  .why-section {
+    background: #ffffff !important;
+
+    padding: 82px 0;
+  }
+
+  .why-heading h2 {
+    color: #29231b;
+
+    font-size: 43px;
+  }
+
+  .why-heading p {
+    color: #81786c;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+  .why-card {
+    min-height: 235px;
+
+    padding: 24px 17px;
+
+    background: #fbf8f1;
+
+    border-radius: 14px;
+  }
+
+  .why-card h3 {
+    color: #29231b;
+
+    font-size: 20px;
+  }
+
+  .why-card p {
+    color: #756d62;
+
+    font-size: 10.5px;
+
+    line-height: 1.65;
+  }
+
+  /* =========================
+     CONTACT
+  ========================= */
+
+  .contact-section {
+    background: #fbf8f1 !important;
+
+    padding: 82px 0;
+  }
+
+  .contact-heading h2 {
+    color: #29231b;
+
+    font-size: 42px;
+  }
+
+  .contact-heading p {
+    color: #756d62;
+
+    font-size: 13px;
+  }
+
+  .contact-card {
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+      0 8px 25px rgba(60, 45, 15, 0.07);
+  }
+
+  .contact-card h3 {
+    color: #29231b;
+  }
+
+  .contact-details strong {
+    color: #40382d;
+  }
+
+  .address {
+    color: #756d62;
+  }
+
+  /* =========================
+     FOOTER
+  ========================= */
+
+  .luxury-footer {
+    background: #211c15 !important;
+
+    color: #ffffff;
+  }
+
+  /* =========================
+     WHATSAPP
+  ========================= */
+
+  .whatsapp-float {
+    z-index: 9990;
+
+    width: 57px;
+    height: 57px;
+
+    right: 16px;
+    bottom: 17px;
+  }
+}
+
+
+/* =========================================================
+   SMALL iPHONE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding-top: 22px;
+
+    gap: 34px;
+  }
+
+  .hero-image img {
+    height: 425px !important;
+  }
+
+  .hero h1 {
+    font-size: 42px !important;
+  }
+
+  .hero-text {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .hero-buttons .gold-btn,
+  .hero-buttons .outline-btn {
+    min-height: 50px;
+  }
+
+  .collections-heading h2,
+  .why-heading h2 {
+    font-size: 40px;
+  }
+
+  .collection-image img {
+    height: 180px !important;
+  }
+
+  .collection-content h3 {
+    font-size: 19px;
+  }
+
+  .about-content h2 {
+    font-size: 40px;
+  }
+
+  .about-image img {
+    height: 370px !important;
+  }
+
+  .contact-heading h2 {
+    font-size: 39px;
+  }
+}
+/* =========================================================
+   R.H. JEWELLERS LLP
+   LUXURY ANIMATION LAYER
+========================================================= */
+
+/* Gentle page reveal */
+
+.hero-content,
+.hero-image,
+.collections-heading,
+.collection-card,
+.about-content,
+.about-image,
+.why-heading,
+.why-card,
+.contact-heading,
+.contact-card {
+  animation: luxuryReveal 0.9s ease both;
+}
+
+@keyframes luxuryReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Hero image luxury effect */
+
+.hero-image img {
+  transition:
+    transform 0.8s ease,
+    box-shadow 0.8s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.015);
+}
+
+
+/* Collection image hover */
+
+.collection-image {
+  overflow: hidden;
+}
+
+.collection-image img {
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.collection-card:hover .collection-image img {
+  transform: scale(1.045);
+  filter: brightness(1.03);
+}
+
+
+/* Collection card */
+
+.collection-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(201, 162, 39, 0.4);
+
+  box-shadow:
+    0 18px 40px rgba(60, 45, 15, 0.12);
+}
+
+
+/* Why Choose cards */
+
+.why-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(201, 162, 39, 0.38);
+
+  box-shadow:
+    0 18px 38px rgba(60, 45, 15, 0.1);
+}
+
+
+/* Buttons */
+
+.gold-btn,
+.outline-btn,
+.whatsapp-btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.gold-btn:hover,
+.outline-btn:hover,
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Gold buttons subtle shine */
+
+.gold-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-btn::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.7s ease;
+}
+
+.gold-btn:hover::after {
+  left: 140%;
+}
+
+
+/* About image */
+
+.about-image img {
+  transition:
+    transform 0.7s ease,
+    box-shadow 0.7s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.012);
+}
+
+
+/* WhatsApp gentle pulse */
+
+.whatsapp-float {
+  animation: whatsappPulse 3s ease-in-out infinite;
+}
+
+@keyframes whatsappPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.18);
+  }
+
+  50% {
+    box-shadow:
+      0 10px 30px rgba(32, 199, 106, 0.28);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Keep mobile animations subtle */
+
+  .hero-content,
+  .hero-image,
+  .collection-card,
+  .about-content,
+  .about-image,
+  .why-card,
+  .contact-card {
+    animation-duration: 0.7s;
+  }
+
+  .collection-card:hover,
+  .why-card:hover {
+    transform: none;
+  }
+
+  .hero-image:hover img,
+  .about-image:hover img {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

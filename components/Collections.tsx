@@ -1,4 +1,3 @@
-import FadeIn from "@/components/FadeIn";
 export default function Collections() {
   const items = [
     {
@@ -36,94 +35,58 @@ export default function Collections() {
   ];
 
   return (
-    <FadeIn>
-    <section
-      id="collections"
-      style={{
-        padding: "80px 20px",
-        background: "#fcf8f2",
-      }}
-    >
+    <section id="collections" className="collections-section">
       <div className="container">
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: "46px",
-            color: "#4b2b16",
-            marginBottom: "10px",
-          }}
-        >
-          Our Collections
-        </h2>
 
-        <p
-          style={{
-            textAlign: "center",
-            color: "#9b6b22",
-            marginBottom: "50px",
-            fontSize: "18px",
-          }}
-        >
-          Crafted with Elegance & Perfection
-        </p>
+        {/* Section Heading */}
+        <div className="collections-heading">
+          <p className="collections-tag">OUR COLLECTIONS</p>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
-            gap: "30px",
-          }}
-        >
+          <h2>Our Collections</h2>
+
+          <div className="collections-divider"></div>
+
+          <p>
+            Crafted with Elegance &amp; Perfection
+          </p>
+        </div>
+
+        {/* Collection Grid */}
+        <div className="collections-grid">
           {items.map((item) => (
-            <div
-              key={item.name}
-              className="card"
-              style={{
-                background: "#fff",
-                borderRadius: "20px",
-                overflow: "hidden",
-                marginBottom: "30px",
-              }}
-            >
-              <img
-                src={item.image}
-                alt={item.name}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  objectFit: "contain",
-                  background: "#fcf8f2",
-                }}
-              />
+            <div className="collection-card" key={item.name}>
 
-              <div style={{ padding: "22px" }}>
-                <h3
-                  style={{
-                    color: "#4b2b16",
-                    fontSize: "28px",
-                  }}
-                >
-                  {item.name}
-                </h3>
+              {/* Image */}
+              <div className="collection-image">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                />
+              </div>
 
-                <p
-                  style={{
-                    color: "#777",
-                    margin: "12px 0 20px",
-                  }}
-                >
-                  Discover premium handcrafted jewellery by RH Jewellers LLP.
+              {/* Content */}
+              <div className="collection-content">
+
+                <h3>{item.name}</h3>
+
+                <p>
+                  Discover premium handcrafted jewellery by
+                  R.H. Jewellers LLP.
                 </p>
 
-                <a href="#contact" className="gold-btn">
+                <a
+                  href="#contact"
+                  className="collection-btn"
+                >
                   Enquire Now
                 </a>
+
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
-    </FadeIn>
   );
 }

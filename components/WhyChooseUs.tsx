@@ -1,107 +1,64 @@
-import FadeIn from "./FadeIn";
-
 export default function WhyChooseUs() {
   const features = [
     {
       title: "Hallmarked Gold",
-      text: "Certified BIS Hallmarked jewellery with guaranteed purity.",
-      icon: "✨",
+      text: "BIS-certified jewellery with assured purity and quality.",
+      icon: "✦",
     },
     {
-      title: "Trusted Since Years",
-      text: "Serving customers with honesty, quality and craftsmanship.",
-      icon: "🤝",
+      title: "Trusted Craftsmanship",
+      text: "Built on honesty, precision, quality and experience.",
+      icon: "◇",
     },
     {
-      title: "Latest Designs",
-      text: "Modern, bridal, antique and daily wear collections.",
-      icon: "💎",
+      title: "Exclusive Designs",
+      text: "Traditional elegance with contemporary styling.",
+      icon: "◈",
     },
     {
-      title: "Premium Craftsmanship",
-      text: "Every jewellery piece is handcrafted with precision.",
-      icon: "👑",
+      title: "Every Occasion",
+      text: "Bridal, festive and elegant everyday jewellery.",
+      icon: "♢",
     },
   ];
 
   return (
-    <FadeIn>
-    <section
-      id="why-us"
-      style={{
-        background: "#ffffff",
-        padding: "90px 20px",
-      }}
-    >
+    <section id="why-us" className="why-section">
       <div className="container">
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: "44px",
-            color: "#4b2b16",
-          }}
-        >
-          Why Choose RH Jewellers LLP
-        </h2>
 
-        <p
-          style={{
-            textAlign: "center",
-            color: "#9b6b22",
-            marginBottom: "60px",
-            fontSize: "18px",
-          }}
-        >
-          Luxury • Trust • Craftsmanship
-        </p>
+        <div className="why-heading">
+          <span className="why-label">THE R.H. JEWELLERS DIFFERENCE</span>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-            gap: "30px",
-          }}
-        >
+          <h2>Why Choose R.H. Jewellers LLP</h2>
+
+          <div className="why-line"></div>
+
+          <p>Luxury · Trust · Craftsmanship</p>
+        </div>
+
+        <div className="why-grid">
           {features.map((item) => (
-            <div
-              key={item.title}
-              className="card"
-              style={{
-                textAlign: "center",
-                padding: "35px",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "50px",
-                  marginBottom: "20px",
-                }}
-              >
+            <div className="why-card" key={item.title}>
+
+              <div className="why-icon">
                 {item.icon}
               </div>
 
-              <h3
-                style={{
-                  color: "#4b2b16",
-                  marginBottom: "15px",
-                }}
-              >
-                {item.title}
-              </h3>
+              <div className="why-number">
+                0{features.indexOf(item) + 1}
+              </div>
 
-              <p
-                style={{
-                  color: "#666",
-                  lineHeight: "1.8",
-                }}
-              >
-                {item.text}
-              </p>
+              <h3>{item.title}</h3>
+
+              <p>{item.text}</p>
+
+              <div className="why-card-line"></div>
+
             </div>
           ))}
         </div>
+
       </div>
     </section>
-    </FadeIn>
   );
 }

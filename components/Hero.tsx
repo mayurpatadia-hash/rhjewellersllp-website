@@ -2,7 +2,7 @@ import FadeIn from "@/components/FadeIn";
 
 export default function Hero() {
   return (
-    <FadeIn>
+   
       <section id="home">
         <div className="container hero">
 
@@ -52,6 +52,6 @@ export default function Hero() {
 
         </div>
       </section>
-    </FadeIn>
+    
   );
 }
