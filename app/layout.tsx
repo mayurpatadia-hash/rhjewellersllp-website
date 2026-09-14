@@ -81,6 +81,64 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "JewelryStore",
+
+  "@id": "https://rhjewellersllp.com/#jewelry-store",
+
+  name: "R.H. Jewellers LLP",
+
+  description:
+    "R.H. Jewellers LLP is a trusted jewellery store in Rajkot, Gujarat, offering BIS Hallmarked 22K gold jewellery including bridal jewellery, antique jewellery, necklaces, chains, rings, bangles, bracelets, mangalsutra and pendant sets.",
+
+  url: "https://rhjewellersllp.com",
+
+  logo: "https://rhjewellersllp.com/logo.png",
+
+  image: "https://rhjewellersllp.com/hero.png",
+
+  telephone: "+919327459009",
+
+  email: "rhjewellers5@gmail.com",
+
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Kotharia Naka, Soni Bazar",
+    addressLocality: "Rajkot",
+    addressRegion: "Gujarat",
+    postalCode: "360001",
+    addressCountry: "IN",
+  },
+
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "11:00",
+      closes: "21:00",
+    },
+  ],
+
+  sameAs: [
+    "https://instagram.com/r.h.jewellers.llp",
+  ],
+
+  hasMap: "https://maps.app.goo.gl/HzAAM5wpUPoybChy7",
+
+  areaServed: {
+    "@type": "City",
+    name: "Rajkot",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -88,7 +146,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+
+        {children}
+      </body>
     </html>
   );
 }
