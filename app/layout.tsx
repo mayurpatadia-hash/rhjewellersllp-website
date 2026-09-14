@@ -8,22 +8,24 @@ export const metadata: Metadata = {
   },
 
   description:
-    "R.H. Jewellers LLP — Timeless Gold. Trusted Craftsmanship. Discover handcrafted BIS Hallmarked gold jewellery in Rajkot, Gujarat, including bridal jewellery, necklaces, chains, rings, bracelets and more.",
+    "R.H. Jewellers LLP is a trusted gold jewellery shop in Rajkot, Gujarat. Explore BIS Hallmarked 22K gold jewellery including bridal jewellery, antique jewellery, gold necklaces, chains, rings, bangles, bracelets, mangalsutra and pendant sets. Timeless Gold. Trusted Craftsmanship.",
 
   keywords: [
     "R.H. Jewellers LLP",
     "RH Jewellers Rajkot",
+    "gold jewellery shop Rajkot",
     "gold jewellery Rajkot",
-    "jewellery shop Rajkot",
     "22K gold jewellery Rajkot",
-    "BIS Hallmarked gold jewellery",
+    "BIS Hallmarked gold jewellery Rajkot",
     "bridal jewellery Rajkot",
-    "gold jewellery Gujarat",
+    "antique gold jewellery Rajkot",
     "gold necklace Rajkot",
     "gold chain Rajkot",
     "gold rings Rajkot",
+    "gold bangles Rajkot",
     "gold bracelets Rajkot",
-    "Antique gold jewellery Rajkot",
+    "gold mangalsutra Rajkot",
+    "gold pendant sets Rajkot",
   ],
 
   authors: [
@@ -63,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "R.H. Jewellers LLP | Gold Jewellery in Rajkot",
     description:
-      "Timeless Gold. Trusted Craftsmanship. Handcrafted BIS Hallmarked gold jewellery in Rajkot.",
+      "R.H. Jewellers LLP is a trusted gold jewellery shop in Rajkot, Gujarat. Explore BIS Hallmarked 22K gold jewellery including bridal jewellery, antique jewellery, gold necklaces, chains, rings, bangles, bracelets, mangalsutra and pendant sets.",
     images: ["/hero.png"],
   },
 
